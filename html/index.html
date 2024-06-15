@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Gym</title>
+    <link rel="icon" type="image/png" href="/images/gym.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <!-- navbar section -->
+    <nav class="navbar">
+        <a href="/html/index.html" class="navbar_logo">Fitness Gym</a>
+        <div class="navbar_toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="navbar_menu">
+            <a href="/html/index.html" class="navbar_link">Home</a>
+            <a href="/html/index.html#services-section" class="navbar_link">Services</a>
+            <a href="/html/index.html#membership-section" class="navbar_link">Plans</a>
+            <a href="/html/index.html#trainer-section" class="navbar_link">Trainers</a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero_content">
+            <h1>Fitness Gym</h1>
+            <p>Join Now for Rs.999</p>
+            <a href="/html/index.html#sign-up" class="button">Get Started</a>
+        </div>
+    </div>
+    <!-- services -->
+    <div class="services"  id="services-section">
+        <div class="services_container">
+            <div>
+                <p class="topline">Features</p>
+                <h1 class="services_heading">What we offer</h1>
+                <div class="service_features">
+                    <i class="ri-checkbox-circle-line"></i>Group Fitness Classes</div>
+                <div class="service_features">
+                    <i class="ri-checkbox-circle-line"></i>Personal Trainer Sessions</div>
+                <div class="service_features">
+                    <i class="ri-checkbox-circle-line"></i>Indoor Pool</div>
+                <div class="service_features">
+                    <i class="ri-checkbox-circle-line"></i>Steam Room and Sauna</div>
+                <div class="service_features">
+                    <i class="ri-checkbox-circle-line"></i>Basketball Court</div>
+                <div class="service_features">
+                    <i class="ri-checkbox-circle-line"></i>Open 24/7</div>
+            </div>
+        </div>
+    </div>
+    <!-- Membership -->
+    <div class="membership" id="membership-section">
+        <h1>View Our Plans</h1>
+        <p class="membership_desc">Get started today and receive 25% off your first month</p>
+        <div class="membership_wrapper">
+            <div class="membership_card">
+                <div class="membership_title">
+                    <i class="ri-bank-card-line"></i>
+                    <h3>Starter</h3>
+                </div>
+                <div class="membership_perks">
+                    <p>Get access to the entire gym</p>
+                    <p>Rs.499 per month</p>
+                </div>
+                <a href="#" class="button">Sign Up</a>
+            </div>   
+            <div class="membership_card">
+                <div class="membership_title">
+                    <i class="ri-bank-card-line"></i>
+                    <h3>Silver</h3>
+                </div>
+                <div class="membership_perks">
+                    <p>Get access to the entire gym</p>
+                    <p>Group fitness classes</p>
+                    <p>Rs.699 per month</p>
+                </div>
+                <a href="#" class="button">Sign Up</a>
+            </div> 
+            <div class="membership_card">
+                <div class="membership_title">
+                    <i class="ri-bank-card-line"></i>
+                    <h3>Gold</h3>
+                </div>
+                <div class="membership_perks">
+                    <p>Get access to the entire gym</p>
+                    <p>Group fitness classes</p>
+                    <p>Private personal trainer</p>
+                    <p>Rs.899 per month</p>
+                </div>
+                <a href="#" class="button">Sign Up</a>
+            </div> 
+        </div>
+    </div>
+    <!-- Team  -->
+    <div class="team" id="trainer-section">
+        <div class="text_text">
+            <p class="team_heading">Private Coaching</p>
+            <h1>Meet our trainers</h1>
+            <p class="team_desc">
+                All our personal trainers have over 10+ years of combined experience.
+                Each trainer specializes in strength and mobility workouts.
+            </p>
+        </div>
+        <div class="text_text">
+            <p class="team_heading">Free Day Trial</p>
+            <h1>7 Day Trial</h1>
+            <p class="team_desc">
+                You can work with each trainer for up to 7 days for free in order to see if they are a good fit for your goals.
+            </p>
+        </div>
+        <div class="team_card">
+            <img src="/images/trainer1.jpg" alt="Sarah - Boxer" class="team_img">
+            <div class="team_info">
+                <p class="trainer_name">Sarah<br/>Boxer</p>
+            </div>
+        </div>
+        <div class="team_card">
+            <img src="/images/trainer2.jpg" alt="Abby - Pilates" class="team_img">
+            <div class="team_info">
+                <p class="trainer_name">Abby<br/>Pilates</p>
+            </div>
+        </div>
+        <div class="team_card">
+            <img src="/images/trainer3.jpg" alt="James - Strength and Conditioning Coach" class="team_img">
+            <div class="team_info">
+                <p class="trainer_name">James<br/>Strength and Conditioning Coach</p>
+            </div>
+        </div>
+        <div class="team_card">
+            <img src="/images/trainer4.jpg" alt="Matt - Personal Trainer" class="team_img">
+            <div class="team_info">
+                <p class="trainer_name">Matt<br/>Personal Trainer</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Email -->
+    <div class="email" id="sign-up">
+        <div class="email_content">
+            <h1>Get access to members-only perks</h1>
+            <p>Sign up for our newsletter below to get 50% off your first personal training session!</p>
+            <form action="#">
+                <div class="form_wrap">
+                    <label for="email">
+                        <input type="email" id="email" placeholder="Email address" required>
+                    </label>
+                    <button class="button" type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer_wrapper">
+            <div class="footer_card">
+                <h2 class="footer_title">Fitness Gym</h2>
+                <p class="footer_paragraph">Located in Miami</p>
+                <p class="footer_paragraph">111-111-1111</p>                
+            </div>
+            <div class="footer_card">
+                <h2 class="footer_paragraph">Contact Us</h2>
+                <a href="services.html" class="footer_link">Contact</a>
+                <a href="services.html" class="footer_link">Support</a>
+                <a href="services.html" class="footer_link">Sponsorship</a>
+            </div>
+            <div class="footer_card">
+                <h2 class="footer_paragraph">Services</h2>
+                <a href="services.html" class="footer_link">Training</a>
+                <a href="services.html" class="footer_link">Classes</a>
+                <a href="services.html" class="footer_link">Membership</a>
+            </div>
+            <div class="footer_card">
+                <h2 class="footer_paragraph">Follow Us</h2>
+                <a href="#" class="footer_link">Facebook</a>
+                <a href="#" class="footer_link">Instagram</a>
+                <a href="#" class="footer_link">Twitter</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>

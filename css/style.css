@@ -1,0 +1,471 @@
+:root {
+    --red: #f9032f;
+    --black: #000;
+    --white: #fff;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* navbar */
+.navbar {
+    background-color: var(--black);
+    height: 60px;
+    padding: 0 2rem; /* Adjusted padding for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar_logo {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.8rem; /* Slightly reduced font size */
+    font-weight: 700;
+    padding: 0; /* Removed left padding */
+}
+
+.navbar_link {
+    color: var(--white);
+    padding: 0 1rem; /* Adjusted padding for better spacing */
+    font-size: 1.6rem; /* Slightly reduced font size */
+    text-decoration: none;
+    transition: color 0.3s; /* Added smooth color transition */
+}
+
+.navbar_link:hover {
+    color: var(--red);
+}
+
+@media screen and (max-width: 768px) {
+    body.active{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .navbar_link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar_menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 100px);
+        width: 100%;
+        top: -1000px;
+        position: absolute;
+        background: var(--black);
+        transition: top 0.3s ease-in-out;
+    }
+    .navbar_menu.active {
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+        height: 100vh;
+        font-size: 1.5rem;
+    }
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: var(--white);
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu {
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+/* Hero Section */
+.hero{
+    background: linear-gradient(to right,rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url('/images/gym1.jpg');
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    padding: 0.5rem calc((100vw - 1200px) / 2);
+    display: flex;
+    justify-self: flex-start;
+    align-items: center;
+}
+.hero_content{
+    color: var(--white);
+    padding: 3rem 1rem;
+    line-height: 1;
+}
+.hero_content h1{
+    font-size: clamp(3rem, 8vw, 6rem);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.hero_content p{
+    font-size: clamp(1rem, 4vw, 2.5rem);
+    margin-bottom: 3rem;
+}
+.button{
+    padding: 1rem 2rem;
+    border: none;
+    background: var(--red);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.button:hover{
+    background: var(--black);
+}
+/* services section */
+.services {
+    padding: 1rem calc((100vw - 1200px) / 2);
+}
+.services_container {
+    padding: 2rem; 
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('/images/gym4.jpg');
+    /* height: 90vh; */
+    background-size: cover;
+    background-position: center;
+    align-items: left;
+
+}
+
+.topline {
+    color: var(--red);
+    font-size: clamp(5rem, 4vw, 6rem);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.services_heading {
+    color: var(--white);
+    font-size: clamp(3rem, 2vw, 6rem);
+}
+
+.service_features {
+    color: var(--white);
+    font-size: clamp(1rem, 2vw, 1.2rem); 
+}
+
+.ri-checkbox-circle-line {
+    color: var(--red);
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .services_container {
+        grid-template-columns: 2fr;
+        height: auto; 
+    }
+    .services {
+        padding: 4rem 2rem; 
+    }
+    .topline, .services_heading {
+        text-align: center; 
+    }
+}
+/* membership */
+.membership {
+    background: var(--black);
+    color: var(--white);
+    padding: 6rem calc((100vw - 1100px) / 2);
+    text-align: center;
+}
+
+.membership h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    padding: 0 1rem;
+}
+
+.membership_desc {
+    margin-bottom: 2rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding: 1rem;
+}
+
+.membership_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.membership_card {
+    padding: 2rem;
+    height: 450px;
+    width: 325px;
+    background: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.membership_perks {
+    min-height: 150px;
+}
+
+.membership_card p {
+    margin-bottom: 1.5rem; 
+    font-weight: 400;
+}
+
+.ri-bank-card-line {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    
+}
+
+.membership_card h3 {
+    font-size: clamp(1rem, 5vw, 2rem);
+    margin-bottom: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .membership_wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .membership_card{
+        width: 75%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Team section */
+.team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.text_text {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.team_heading {
+    color: var(--red);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+}
+
+.text_text h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.team_desc {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 1rem;
+}
+
+.team_card {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.team_img {
+    width: 60%;
+    height: auto;
+    display: flex;
+    margin: auto;
+}
+
+.team_card p {
+    position: absolute;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Responsive Layout for Screens Smaller than 768px */
+@media screen and (max-width: 768px) {
+    .team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team_card {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .team_img {
+        width: 60%;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .text_text {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+/* Form section */
+.email {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 35%, rgba(0, 0, 0, 0.1) 100%), url('/images/gym3.jpg') no-repeat center;
+    padding: 7rem calc((100vw - 1200px) / 2);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 100%;
+    color: var(--white);
+    background-size: cover;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.email_content {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.email h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.email p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.email form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.email input[type="email"] {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+.footer_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer_card {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 1rem;
+    width: calc(25% - 2rem);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.footer_card:hover {
+    transform: translateY(-5px);
+}
+
+.footer_title {
+    font-size: 2rem; /* Adjusted font size */
+    margin-bottom: 1rem;
+    color: var(--red);
+}
+
+.footer_paragraph {
+    font-size: 1rem; /* Adjusted font size */
+    margin-bottom: 1rem;
+}
+
+.footer_link {
+    display: block; /* Ensure links are displayed as block elements */
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 0.5rem; /* Added margin for spacing */
+    transition: color 0.3s;
+}
+
+.footer_link:hover {
+    color: var(--red);
+}
+
+/* Responsive Layout for Screens Smaller than 768px */
+@media screen and (max-width: 768px) {
+    .footer_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_card {
+        width: 100%;
+        text-align: center;
+    }
+}
