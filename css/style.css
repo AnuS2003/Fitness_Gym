@@ -94,7 +94,7 @@
 }
 /* Hero Section */
 .hero{
-    background: linear-gradient(to right,rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url('/images/gym1.jpg');
+    background: linear-gradient(to right,rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url('/Fitness_Gym/images/gym1.jpg');
     height:100vh;
     background-position: center;
     background-size: cover;
@@ -139,7 +139,7 @@
 }
 .services_container {
     padding: 2rem; 
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('/images/gym4.jpg');
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('/Fitness_Gym/images/gym4.jpg');
     /* height: 90vh; */
     background-size: cover;
     background-position: center;
@@ -347,7 +347,7 @@
 
 /* Form section */
 .email {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 35%, rgba(0, 0, 0, 0.1) 100%), url('/images/gym3.jpg') no-repeat center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 35%, rgba(0, 0, 0, 0.1) 100%), url('/Fitness_Gym/images/gym3.jpg') no-repeat center;
     padding: 7rem calc((100vw - 1200px) / 2);
     line-height: 1;
     display: flex;
